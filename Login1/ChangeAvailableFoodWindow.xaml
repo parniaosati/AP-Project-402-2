@@ -1,0 +1,19 @@
+﻿<Window x:Class="Login1.ChangeAvailableFoodWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Change Available Food" Height="300" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Select Category:" Margin="0,0,0,10"/>
+            <ComboBox x:Name="CategoryComboBox" Width="300" SelectionChanged="CategoryComboBox_SelectionChanged" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Select Item:" Margin="0,10,0,10"/>
+            <ComboBox x:Name="ItemComboBox" Width="300" SelectionChanged="ItemComboBox_SelectionChanged" Margin="0,0,0,10"/>
+
+            <TextBlock Text="New Available Quantity:" Margin="0,10,0,10"/>
+            <TextBox x:Name="QuantityTextBox" Width="300" Margin="0,0,0,10"/>
+
+            <Button Content="Update Quantity" Width="150" Click="UpdateQuantityButton_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>

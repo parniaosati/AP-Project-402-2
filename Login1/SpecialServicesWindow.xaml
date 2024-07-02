@@ -1,0 +1,27 @@
+﻿<Window x:Class="Login1.SpecialServicesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Special Services" Height="600" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Special Services" FontSize="24" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <TextBlock Text="Restaurant:" Width="100"/>
+                <ComboBox x:Name="RestaurantComboBox" Width="200" SelectionChanged="RestaurantComboBox_SelectionChanged"/>
+            </StackPanel>
+
+            <ListView x:Name="SpecialServicesListView" Margin="20" Height="400" SelectionChanged="SpecialServicesListView_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Service Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                        <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" Width="300"/>
+                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="100"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <Button Content="Reserve Service" Width="120" Click="ReserveServiceButton_Click" HorizontalAlignment="Center" Margin="20"/>
+        </StackPanel>
+    </Grid>
+</Window>

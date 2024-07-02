@@ -1,0 +1,39 @@
+﻿<Window x:Class="Login1.CustomerPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login1"
+        mc:Ignorable="d"
+        Title="CustomerPanel" Height="450" Width="300">
+    <Grid>
+        <Menu HorizontalAlignment="Left" Width="297" Margin="-2,0,-1.4,0" FontSize="24" RenderTransformOrigin="0.813,0.622" Height="420" VerticalAlignment="Top">
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFFFAD5A"/>
+                </LinearGradientBrush>
+            </Menu.Background>
+            <Menu.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.281"/>
+                    <TranslateTransform X="-0.253" Y="0.291"/>
+                </TransformGroup>
+            </Menu.RenderTransform>
+            <Menu.Foreground>
+                <ImageBrush/>
+            </Menu.Foreground>
+            <Label x:Name="lblPanelTitle" Content="Customer Panel" Foreground="Black" FontSize="25" HorizontalAlignment="Center" Height="38" Width="198" Margin="50,20,0,0"/>
+            <Separator Height="1" Width="278" BorderBrush="Black" Background="Black"></Separator>
+            <Button Content="Profile" Width="215" Height="45" FontSize="16" Background="#FFFBDAC1" BorderBrush="#FFF1CA90" OpacityMask="#FFF5BD8D" Margin="35,10,0,0" Click="ProfileButton_Click"/>
+            <Button Content="Search Restaurants" Width="215" Height="44" Background="#FFF9B686" FontSize="16" Margin="35,0,0,0" Click="SearchRestaurantsButton_Click"/>
+            <Button Content="Order Food" Width="215" Height="45" FontSize="16" Background="#FFEA9B62" Margin="35,0,0,0" Click="OrderFoodButton_Click"/>
+            <Button Content="Order History" Width="215" Height="45" Background="#FFDE894D" FontSize="16" Margin="35,0,0,0" Click="OrderHistoryButton_Click"/>
+            <Button Content="Register Complaints" Width="215" Height="45" Background="#FFD16F38" FontSize="16" Margin="35,0,0,0" Click="RegisterComplaintsButton_Click"/>
+            <Button Content="Special Services" Width="215" Height="45" Background="#FFAC5A2A" FontSize="16" Margin="35,0,0,0" Click="SpecialServicesButton_Click"/>
+            <Button Content="Sign Out" Width="165" Height="32" FontSize="18" Background="#FF763B1F" Margin="60,0,0,0" Click="SignOutButton_Click"/>
+        </Menu>
+    </Grid>
+</Window>

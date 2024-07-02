@@ -1,0 +1,38 @@
+﻿<Window x:Class="Login1.OrderFoodWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login1"
+        mc:Ignorable="d"
+        Title="Order Food" Height="450" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Order Food" FontSize="24" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <TextBlock Text="Select Restaurant:" Width="150"/>
+                <ComboBox x:Name="RestaurantComboBox" Width="200" SelectionChanged="RestaurantComboBox_SelectionChanged"/>
+            </StackPanel>
+
+            <TextBlock Text="Menu Items:" FontSize="18" Margin="0,20,0,10" HorizontalAlignment="Left"/>
+            <ListView x:Name="MenuItemsListView" Margin="0,10,0,10" Height="200" SelectionChanged="MenuItemsListView_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                        <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" Width="250"/>
+                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="100"/>
+                        <GridViewColumn Header="Available Quantity" DisplayMemberBinding="{Binding AvailableQuantity}" Width="150"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <TextBlock Text="Quantity:" Width="100"/>
+                <TextBox x:Name="QuantityTextBox" Width="100"/>
+            </StackPanel>
+
+            <Button Content="Place Order" Width="120" Click="OrderButton_Click" HorizontalAlignment="Center" Margin="20"/>
+        </StackPanel>
+    </Grid>
+</Window>

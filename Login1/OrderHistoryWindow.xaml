@@ -1,0 +1,26 @@
+﻿<Window x:Class="Login1.OrderHistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login1"
+        mc:Ignorable="d"
+        Title="OrderHistoryWindow" Height="600" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Order History" FontSize="24" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <ListView x:Name="OrderHistoryListView" Margin="20" Height="500">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Order ID" DisplayMemberBinding="{Binding OrderId}" Width="100"/>
+                        <GridViewColumn Header="Restaurant Name" DisplayMemberBinding="{Binding RestaurantName}" Width="200"/>
+                        <GridViewColumn Header="Order Date" DisplayMemberBinding="{Binding OrderDate}" Width="150"/>
+                        <GridViewColumn Header="Total Amount" DisplayMemberBinding="{Binding TotalAmount}" Width="100"/>
+                        <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}" Width="100"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>
