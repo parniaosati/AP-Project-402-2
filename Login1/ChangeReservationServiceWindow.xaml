@@ -1,0 +1,21 @@
+﻿<Window x:Class="Login1.ChangeReservationServiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login1"
+        mc:Ignorable="d"
+        Title="ChangeReservationServiceWindow" Height="200" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Change Reservation Service" FontSize="24" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <TextBlock Text="Activate Reservations:" Width="150"/>
+                <CheckBox x:Name="ActivateReservationsCheckBox"/>
+            </StackPanel>
+
+            <Button Content="Save Changes" Width="120" Click="SaveChangesButton_Click" HorizontalAlignment="Center" Margin="20"/>
+        </StackPanel>
+    </Grid>
+</Window>

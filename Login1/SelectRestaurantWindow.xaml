@@ -1,0 +1,20 @@
+﻿<Window x:Class="Login1.SelectRestaurantWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Select Restaurant" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Select a Restaurant" FontSize="24" Margin="10" HorizontalAlignment="Center"/>
+            <ListView x:Name="RestaurantListView" Margin="10" SelectionMode="Single">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                        <GridViewColumn Header="City" DisplayMemberBinding="{Binding City}" Width="150"/>
+                        <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Content="Select" Width="100" Height="30" Margin="10" HorizontalAlignment="Center" Click="SelectButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="Login1.SearchRestaurantsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SearchRestaurantsWindow" Height="800" Width="1000">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Search Restaurants" FontSize="24" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <TextBlock Text="City:" Width="100"/>
+                <TextBox x:Name="CityTextBox" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <TextBlock Text="Type:" Width="100"/>
+                <TextBox x:Name="TypeTextBox" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <TextBlock Text="Rating:" Width="100"/>
+                <TextBox x:Name="SearchRatingTextBox" Width="200"/>
+            </StackPanel>
+            <Button Content="Search" Width="120" Click="SearchButton_Click" HorizontalAlignment="Center" Margin="20"/>
+        </StackPanel>
+
+        <ListView x:Name="RestaurantList" Margin="20" Grid.Row="1" Height="300" SelectionChanged="RestaurantList_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                    <GridViewColumn Header="City" DisplayMemberBinding="{Binding City}" Width="100"/>
+                    <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="100"/>
+                    <GridViewColumn Header="Rating" DisplayMemberBinding="{Binding Rating}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

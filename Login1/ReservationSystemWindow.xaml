@@ -1,0 +1,10 @@
+﻿<Window x:Class="Login1.ReservationSystemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Reservation System" Height="200" Width="400" Background="#FFF8F1E1">
+    <Grid Margin="10">
+        <TextBlock Text="Reservation System" FontSize="24" Margin="0,0,0,20" HorizontalAlignment="Center" Foreground="#8B4513"/>
+        <TextBlock x:Name="RatingTextBlock" Text="Your Rating: N/A" FontSize="16" Margin="0,40,0,0" HorizontalAlignment="Center" Foreground="#8B4513"/>
+        <Button x:Name="EnableReservationButton" Content="Enable Reservation System" Width="200" Height="50" Margin="0,80,0,0" HorizontalAlignment="Center" IsEnabled="False" Click="EnableReservationButton_Click" Background="#FFE3A869" Foreground="#8B4513" BorderBrush="#8B4513"/>
+    </Grid>
+</Window>

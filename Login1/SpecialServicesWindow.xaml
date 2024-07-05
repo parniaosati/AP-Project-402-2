@@ -1,0 +1,21 @@
+﻿<Window x:Class="Login1.SpecialServicesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Special Services" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Special Services" FontSize="24" Margin="10" HorizontalAlignment="Center"/>
+            <ListView x:Name="SpecialServiceListView" Margin="10" SelectionMode="Single">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Service Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="100"/>
+                        <GridViewColumn Header="Reservations Per Month" DisplayMemberBinding="{Binding ReservationsPerMonth}" Width="150"/>
+                        <GridViewColumn Header="Reservation Time Limit" DisplayMemberBinding="{Binding ReservationTimeLimit}" Width="150"/>
+                        <GridViewColumn Header="Cancellation Threshold" DisplayMemberBinding="{Binding CancellationThreshold}" Width="150"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>

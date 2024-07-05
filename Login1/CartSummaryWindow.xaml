@@ -1,0 +1,26 @@
+﻿<Window x:Class="Login1.CartSummaryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cart Summary" Height="400" Width="600" Background="#FFF8F1E1">
+    <Grid Margin="10">
+        <Border Margin="10" Background="#FFE3A869" Padding="10" BorderBrush="#FF8B4513" BorderThickness="2">
+            <StackPanel>
+                <TextBlock Text="Cart Summary" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#8B4513"/>
+                <Separator Background="#FF8B4513" Height="2" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <ListView x:Name="CartListView" Margin="10,60,10,70" Background="#FFF8F1E1" BorderBrush="#FF8B4513" BorderThickness="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Item" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="100"/>
+                    <GridViewColumn Header="Quantity" DisplayMemberBinding="{Binding Quantity}" Width="100"/>
+                    <GridViewColumn Header="Total" DisplayMemberBinding="{Binding Total}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Content="Complete Purchase" Width="150" HorizontalAlignment="Right" Margin="0,320,0,0" Background="#FFE3A869" Foreground="#8B4513" BorderBrush="#FF8B4513" Click="CompletePurchase_Click"/>
+    </Grid>
+</Window>

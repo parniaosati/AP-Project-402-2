@@ -1,0 +1,15 @@
+﻿<Window x:Class="Login1.ShowMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Show Menu" Height="600" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+            <ComboBox x:Name="CategoryComboBox" Width="300" SelectionChanged="CategoryComboBox_SelectionChanged" Margin="0,0,0,10"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="500">
+                <Grid x:Name="MenuGrid">
+                    <!-- Dynamic content will be added here -->
+                </Grid>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Window>

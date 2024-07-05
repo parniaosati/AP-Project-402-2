@@ -1,0 +1,13 @@
+﻿<Window x:Class="Login1.PaymentMethodDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PaymentMethodDialog" Height="200" Width="400" Background="#FFF8F1E1">
+    <StackPanel Margin="10">
+        <TextBlock Text="Select Payment Method" FontSize="16" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center" Foreground="#8B4513"/>
+        <StackPanel x:Name="PaymentMethodPanel">
+            <RadioButton Content="Cash" GroupName="PaymentMethod" Margin="0,0,0,10" Background="#FFE3A869" Foreground="#8B4513"/>
+            <RadioButton Content="Credit Card" GroupName="PaymentMethod" Background="#FFE3A869" Foreground="#8B4513"/>
+        </StackPanel>
+        <Button Content="OK" Width="75" HorizontalAlignment="Right" Margin="0,20,0,0" Click="OkButton_Click" Background="#FFE3A869" Foreground="#8B4513" BorderBrush="#8B4513"/>
+    </StackPanel>
+</Window>
