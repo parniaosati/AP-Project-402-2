@@ -94,7 +94,7 @@ The project is implemented in **C#** using **WPF** for the user interface and **
    git clone https://github.com/your-username/restaurant-management-system.git
    cd restaurant-management-system
    
-##Set Up the Database:
+## Set Up the Database:
 
 1. **Install SQL Server**  
    - Install **SQL Server** on your system.  
