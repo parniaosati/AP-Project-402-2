@@ -93,3 +93,105 @@ The project is implemented in **C#** using **WPF** for the user interface and **
    ```bash
    git clone https://github.com/your-username/restaurant-management-system.git
    cd restaurant-management-system
+   
+# Set Up the Database
+
+1. **Install SQL Server**  
+   - Install **SQL Server** on your system.  
+   - Restore the provided `.sql` file to set up the database. This file contains all the necessary tables and relationships for the project.  
+
+2. **Configure the Connection String**  
+   - Ensure the connection string in the project matches your SQL Server configuration.  
+
+---
+
+# Install Dependencies
+
+1. **Open the Project**  
+   - Open the project in **Visual Studio**.  
+
+2. **Restore NuGet Packages**  
+   - Restore NuGet packages to ensure all required dependencies are installed.  
+
+---
+
+# Run the Application
+
+1. **Build and Run the Project**  
+   - Build the project in **Visual Studio**.  
+   - Run the application.  
+
+2. **Login as a User**  
+   - Once the application launches, you can log in as a **customer**, **restaurant**, or **admin** depending on the credentials provided.
+
+
+## Usage
+
+### For Customers:
+- **Login or Register**: Customers must log in or register to access the system.
+- **Order Food**: Browse restaurant menus, add items to the cart, and place orders.
+- **Reserve Tables**: Choose a reservation time and service tier.
+- **Provide Feedback**: Rate and comment on food items.
+- **Track Orders**: View order history and reservation details.
+- **Submit Complaints**: Customers can file complaints against restaurants and track their status.
+
+### For Restaurants:
+- **Manage Menu**: Add, edit, or delete food items and update availability.
+- **View Reservations/Orders**: Filter and manage incoming orders and reservations.
+- **Generate Reports**: Export reservation and order data as CSV files.
+- **Activate/Deactivate Services**: Enable or disable table reservations based on ratings.
+
+### For Admins:
+- **Add Restaurants**: Register new restaurants and set initial credentials.
+- **Manage Complaints**: View, filter, and respond to customer complaints.
+- **Search and Filter**: Search for restaurants or complaints using various criteria.
+
+---
+
+## Technologies Used
+
+The project uses the following technologies:
+
+- **Programming Language**: C#  
+- **Frontend Framework**: WPF (Windows Presentation Foundation)  
+- **Database**: SQL Server  
+- **Version Control**: Git  
+- **Other Tools**: LINQ for data filtering and search functionality  
+
+---
+
+## Project Structure
+
+The project is organized into the following main components:
+
+- **Frontend**: Built using WPF and XAML for a clean and responsive user interface.
+- **Backend**: Handles business logic and database interactions.
+- **Database**: SQL Server is used to store user, restaurant, menu, order, and complaint data.
+
+Directory structure:
+- `/Models`: Contains data models for users, restaurants, orders, etc.
+- `/Views`: WPF XAML files for the user interface.
+- `/ViewModels`: Logic for binding data to views.
+- `/Database`: SQL scripts for database setup.
+- `/Services`: Business logic and backend services.
+
+---
+
+## Contributing
+
+We welcome contributions to improve this project! To contribute:
+
+1. **Fork the Repository**: Create a copy of the repository under your GitHub account.
+2. **Create a Branch**: Create a new branch for your feature or bug fix.
+3. **Make Changes**: Commit your changes to your branch.
+4. **Submit a Pull Request**: Open a pull request to the main repository, and we will review it promptly.
+
+Please ensure your code is clean and well-documented. Contributions that improve functionality, fix bugs, or enhance the user experience are highly appreciated.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
+
+---
