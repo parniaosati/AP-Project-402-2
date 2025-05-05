@@ -165,3 +165,40 @@ Customers can subscribe to special services to access enhanced features:
   - 8-digit random number.
 
 ---
+## 🖥️ Setup Instructions
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/restaurant-management-system.git
+   ```
+   ## 🗄️ Database Setup
+
+### 1. Install Requirements
+
+- Install **SQL Server** and **SQL Server Management Studio (SSMS)**.
+
+### 2. Execute SQL Scripts
+
+- Open **SSMS**.
+- Use the SQL scripts located in the `/Database` directory to:
+  - ✅ Create all necessary tables.
+  - ✅ Seed initial data (e.g., admin accounts, sample restaurants).
+- Make sure your **SQL Server instance is running** properly.
+
+---
+
+## ⚙️ Configure the Application
+
+### 3. Update Connection String
+
+- Open the solution in **Visual Studio**.
+- Navigate to `App.config` (or your data access configuration file).
+- Replace the default connection string with the one that matches your local SQL Server instance. Example:
+
+```xml
+<connectionStrings>
+  <add name="RestaurantDbContext"
+       connectionString="Data Source=localhost;Initial Catalog=RestaurantDb;Integrated Security=True;"
+       providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
