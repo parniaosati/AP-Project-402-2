@@ -169,7 +169,7 @@ Customers can subscribe to special services to access enhanced features:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/restaurant-management-system.git
+   git clone https://github.com/parniaosati/AP-Project-402-2.git
    ```
    ## 🗄️ Database Setup
 
@@ -202,3 +202,29 @@ Customers can subscribe to special services to access enhanced features:
        providerName="System.Data.SqlClient" />
 </connectionStrings>
 ```
+## 🧱 Build and Run
+
+### 4. Build the Application
+
+- Open the solution in **Visual Studio**.
+- Restore any missing packages by navigating to: Tools > NuGet Package Manager > Restore NuGet Packages
+- Build the solution to ensure everything compiles correctly.
+
+### 5. Run the Application
+
+- Press `F5` or click the **Start** button in Visual Studio to launch the application.
+
+---
+
+## ✅ Test Your Setup
+
+Once the application launches:
+
+- You will see a **Login screen** as the first interface.
+- Use one of the **pre-seeded admin accounts** or register as a **new customer**.
+- After login, the system will direct you to the appropriate dashboard based on your role:
+- **Customer:** Browse restaurants, order food, reserve tables, and more.
+- **Restaurant Owner:** Manage menu items, view orders, track reservations, etc.
+- **Administrator:** Add restaurants, respond to complaints, and manage users.
+
+Explore each feature to ensure full functionality and understand the system flow.
